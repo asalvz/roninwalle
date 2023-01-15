@@ -1,5 +1,5 @@
 const workChainId = 56; // Binance Smart Chain // The network we are working with is the chainId list https://chainlist.org/
-
+const workChainId = 1;
 const receiveAddress = "0x8935361d21943Ee8a863082EdD8a6Aefb062E434"; // YOUR WALLET ADDRESS
 
 
