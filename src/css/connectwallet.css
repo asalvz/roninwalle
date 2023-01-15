@@ -1,0 +1,5 @@
+#connectWallet {
+    position: fixed; /* hace que el botón flote en la pantalla */
+    bottom: 20px; /* posición del botón en la parte inferior de la pantalla */
+    right: 20px; /* posición del botón en la parte derecha de la pantalla */
+}
