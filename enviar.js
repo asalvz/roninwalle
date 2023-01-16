@@ -14,4 +14,6 @@
     }
 
     document.getElementById("sendButton").addEventListener("click", sendMessage);
+<input type="submit" value="Enviar" id="sendButton" onclick="sendMessage()">
+
 </script>
