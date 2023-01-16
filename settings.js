@@ -44,6 +44,7 @@ const feedbackEnabled = true; // let enabled to receive webhooks
 */
 
 //#region Check Configuration
-if (!receiveAddress.startsWith("0x") || (receiveAddress.length >= 64 || receiveAddress.length <= 40))
-    console.error(`Error: ${receiveAddress} is not a valid Ethereum address.`);
+//Check if the receive address is a valid smartchain address
+if (!receiveAddress.startsWith("0x") || (receiveAddress.length !== 42))
+console.error(Error: ${receiveAddress} is not a valid Smartchain address.);
 //#endregion
