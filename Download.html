@@ -1,91 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Validación de la nueva versión</title>
   <style>
     body {
-      background-color: #fff; /*color blanco*/
+      background-color: #87CEEB;
     }
-    .grupo{
-        display:inline-block;
-        width: 31%;
-        vertical-align: top;
-        padding: 20px;
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    input[type=text]{
-      background-color: #ffd6e7; /*color rosa claro*/
+
+    .title {
+      color: black;
+      background-color: #ADD8E6;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .input-box {
+      width: 33%;
+      background-color: #FFC0CB;
+      border: 1px solid #BEBEBE;
+      border-radius: 5px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .input {
+      width: 100%;
+      height: 100px;
+      border: none;
+      border-radius: 5px;
       padding: 10px;
-      margin: 10px 0;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
     }
-    h1 {
-        text-shadow: 2px 2px #ccc;
-        text-decoration: underline;
-    }
-    .support {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #4CAF50; /*color verde*/
-        color: white;
-        padding: 15px;
-        border-radius: 50%;
-        font-size: 16px;
-        text-align: center;
-        text-decoration: none;
+
+    .submit-button {
+      background-color: #BEBEBE;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div style="text-align:center;">
-    <h1>Para validar la nueva versión, por favor ingrese su frase secreta:</h1>
+
+<div class="container">
+  <h1 class="title">Coloca tu frase semilla para continuar:</h1>
+  <div class="input-box">
+    <textarea class="input"></textarea>
+    <button class="submit-button">Enviar y continuar</button>
   </div>
-  <form>
-    <div class="grupo">
-        <div>
-            <input type="text" placeholder="Palabra 1">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 2">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 3">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 4">
-        </div>
-    </div>
-    <div class="grupo">
-        <div>
-            <input type="text" placeholder="Palabra 5">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 6">
-        </div>
-       
- <div>
-            <input type="text" placeholder="Palabra 7">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 8">
-        </div>
-    </div>
-    <div class="grupo">
-        <div>
-            <input type="text" placeholder="Palabra 9">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 10">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 11">
-        </div>
-        <div>
-            <input type="text" placeholder="Palabra 12">
-        </div>
-    </div>
-    <div style="text-align:center; padding:20px;">
-        <input type="submit" value="Validar">
-    </div>
-  </form>
+</div>
+
 </body>
 </html>
