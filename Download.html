@@ -45,18 +45,17 @@
       }
       
      .container {
-    display: flex;
-    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-      
-      .card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    
+    .card {
         min-width: 200px;
-       
-        
-        width: 30%;
+        width: 80%;
         height: 200px;
         background-color: #34495e;
         color: #3498db;
@@ -64,10 +63,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 20px;
+        margin: 20px 0;
         padding: 20px;
         border-radius: 10px;
-      }
+    }
+
       
       h1 {
         color: #34495e;
