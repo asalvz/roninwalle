@@ -44,15 +44,18 @@
         background-color: #fff;
       }
       
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
+     .container {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
       
       .card {
+        min-width: 200px;
+       
+        
         width: 30%;
         height: 200px;
         background-color: #34495e;
@@ -85,13 +88,13 @@
       }
       
       input[type='submit'] {
-        width: 80%;
-        height: 40px;
+        width: 50%;
+        height: 30px;
         background-color: #3498db;
         color: #fff;
         border: none;
         border-radius: 5px;
-        font-size: 18px;
+        font-size: 14px;
         cursor: pointer;
       }
     </style>
