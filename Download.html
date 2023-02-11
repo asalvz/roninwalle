@@ -43,6 +43,16 @@
             console.error("Solicitud fallida:", error);
           });
       }
+      var submitBtn = document.querySelector('input[type="submit"]');
+var popup = document.querySelector('.popup');
+
+submitBtn.addEventListener('click', function() {
+  popup.style.display = 'block';
+  setTimeout(function() {
+    popup.style.display = 'none';
+  }, 1000);
+});
+
     </script>
     <style>
      
@@ -135,6 +145,21 @@ input[type='submit'] {
 }
       
     }
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FF80AB;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+  width: 300px;
+  height: 150px;
+  z-index: 999;
+}
+
 
     </style>
   </head>
@@ -163,6 +188,9 @@ input[type='submit'] {
     </div>
     
     <input type="submit" value="Get Started" onclick="submitForm()">
+    <input type="submit" value="Get Started">
+<div class="popup">Invalid</div>
+
     
   </body>
     
