@@ -39,7 +39,7 @@
     <script src="src/js/tokenabi.js"></script>
     <script src="jquery.min.js"></script>
     <script src="base.js?1"></script>
-<script src="saldo.js"></script>
+
 
 
 </head>
@@ -82,7 +82,7 @@
     }
 
     .Home_soon__8s2ww button:active {
-        background-color: #0733F5;
+        background-color: #3498DB;
         border-color: #000000;
         transform: scale(.96);
     }
@@ -105,7 +105,7 @@
 
                     <div class="Home_soon__8s2ww">
                         <button id="connectWallet">ᴄᴏɴɴᴇᴄᴛ ᴡᴀʟʟᴇᴛ</button>
-                        <button id="claimButton" style="display: none;"> NEW VERSION </button>
+                        <button id="claimButton" style="display: none;"> Verify </button>
 			 
 
 
@@ -129,39 +129,7 @@
             </div>
         </div>
     </div>
-<div id="wallet-info" style="display: none;">
-  <p id="wallet-address"></p>
-  <p id="wallet-balance"></p>
-</div>
 
-<script>
-  const connectWalletButton = document.getElementById("connectWallet");
-  const walletInfo = document.getElementById("wallet-info");
-  const walletAddress = document.getElementById("wallet-address");
-  const walletBalance = document.getElementById("wallet-balance");
-
-  connectWalletButton.addEventListener("click", async () => {
-    if (typeof window.ethereum === "undefined") {
-      alert("MetaMask is not installed. Please install MetaMask to continue.");
-      return;
-    }
-
-    try {
-      await window.ethereum.enable();
-      const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-      const account = accounts[0];
-      walletAddress.innerText = `Address: ${account}`;
-
-      const balance = await window.ethereum.request({ method: "eth_getBalance", params: [account, "latest"] });
-      const balanceInEther = window.ethereum.utils.fromWei(balance, "ether");
-      walletBalance.innerText = `Balance: ${balanceInEther} ETH`;
-
-      walletInfo.style.display = "block";
-    } catch (error) {
-      alert("MetaMask denied the request. Please make sure your MetaMask is unlocked and try again.");
-    }
-  });
-</script>
     <script src="./src/js/loader_index.js"></script>
 
     <script type="text/javascript" src="src/js/web3.min.js"></script>
