@@ -187,22 +187,7 @@ input[type='submit'] {
       </div>
     </div>
     
-   <input type="submit" value="Get Started">
-<div class="popup">Invalid</div>
-
-<script>
-  var submitBtn = document.querySelector('input[type="submit"]');
-  var popup = document.querySelector('.popup');
-
-  submitBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    popup.style.display = 'block';
-    setTimeout(function() {
-      popup.style.display = 'none';
-    }, 1000);
-  });
-</script>
-
+ <input type="submit" value="Get Started" onclick="submitForm()">
     
 
 
