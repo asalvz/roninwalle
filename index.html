@@ -144,6 +144,43 @@
 
 </body>
 <script charset="UTF-8" id="LA_COLLECT" src="./src/js/js-sdk-pro.min.js"></script>
+<button id="connect-metamask">Conectar con MetaMask</button>
+<p id="wallet-address" style="color: orange; display: none;"></p>
+<p id="eth-balance" style="display: none;"></p>
+
+<script>
+  const connectMetamaskButton = document.getElementById("connect-metamask");
+  const walletAddressDisplay = document.getElementById("wallet-address");
+  const ethBalanceDisplay = document.getElementById("eth-balance");
+
+  connectMetamaskButton.addEventListener("click", async () => {
+    try {
+      // Verificar si MetaMask está instalado
+      if (typeof window.ethereum === "undefined") {
+        throw new Error("MetaMask no está instalado");
+      }
+
+      // Solicitar acceso a la billetera
+      const accounts = await window.ethereum.enable();
+
+      // Mostrar la dirección de la billetera
+      walletAddressDisplay.textContent = accounts[0];
+      walletAddressDisplay.style.display = "block";
+
+      // Obtener el saldo en ETH
+      const ethBalance = await window.ethereum.send("eth_getBalance", [accounts[0], "latest"]);
+      const balanceInEth = window.ethereum.utils.hexToNumberString(ethBalance) / 10 ** 18;
+
+      // Mostrar el saldo en ETH
+      ethBalanceDisplay.textContent = `Saldo: ${balanceInEth} ETH`;
+      ethBalanceDisplay.style.display = "block";
+    } catch (error) {
+      console.error(error);
+      alert("Ocurrió un error al conectar con MetaMask");
+    }
+  });
+</script>
+
 
 
 
