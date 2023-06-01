@@ -59,7 +59,7 @@
         font-weight: 600;
         line-height: 20px;
         outline: none;
-        position: fixed;
+        position: fixed; /* Cambiamos la posición a fixed */
         text-align: center;
         text-decoration: none;
         touch-action: manipulation;
@@ -68,6 +68,11 @@
         -webkit-user-select: none;
         width: auto;
         animation: blink 2s linear infinite;
+        
+        /* Nuevos estilos */
+        z-index: 9999; /* Asignamos un valor alto para que aparezca por encima de todo */
+        top: 20px; /* Ajustamos la posición vertical */
+        right: 20px; /* Aju
     }
 
     .Home_soon__8s2ww button:focus-visible {
